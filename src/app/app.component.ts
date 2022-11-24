@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     this.fullLink2 = result.result.full_short_link2
     return;
      this.myService.shortenUrl(formRecord.value).subscribe((result:any) =>{
-      if (result){
+      if (result.ok === "true"){
         console.log(result)
         this.response = result
         this.shortLink1 = result.short_link
