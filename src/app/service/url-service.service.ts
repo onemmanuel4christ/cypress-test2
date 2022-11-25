@@ -10,6 +10,6 @@ export class UrlServiceService {
   constructor(private http: HttpClient) { }
 
   shortenUrl(longUrl: any) {
-    return this.http.post(environment.apiEndpoint + '/shorten', {longUrl});
+    return this.http.get(environment.apiEndpoint + '/shorten/?url='+ longUrl);
   }
 }

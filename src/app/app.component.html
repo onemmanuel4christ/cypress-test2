@@ -1,4 +1,5 @@
 <div class="container">
+  <h1 *ngIf="fetching && !errorMessage ">Transforming...</h1>
  <form #formRecord = "ngForm" (ngSubmit)="handleSubmit(formRecord)">
   <div class="input__wrapper">
     <input
@@ -12,7 +13,7 @@
   </div>
 
  </form>
- <div *ngIf="shortLink1" class="shorten__link__wrap">
+ <div *ngIf="data && !errorMessage" class="shorten__link__wrap">
     <div class="short__link">
       <label>short_link:</label>
       <a href="{{fullLink}}" target="_blank">{{shortLink1}}</a>
@@ -22,4 +23,5 @@
       <a  href="{{fullLink2}} "target="_blank">{{shortLink2}}</a>
     </div>
  </div>
+ <p class="errMsg" *ngIf="errorMessage">{{errorMessage}}</p>
 </div>

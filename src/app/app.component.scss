@@ -11,6 +11,7 @@
     .input__wrapper{
       width: 100%;
       display: flex;
+      margin-top: 40px;
       input{
         flex: 11;
         outline: none;
@@ -47,5 +48,9 @@
         margin-right: 10px;
       }
     }
+  }
+
+  .errMsg{
+    margin: 40px;
   }
 }
